@@ -9,7 +9,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("conectar", 1.5f);
     }
 
     // Update is called once per frame
@@ -32,4 +31,9 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         Debug.Log("unido a lobby");
         SceneManager.LoadScene("Lobby",LoadSceneMode.Single);
     }
+    public void ingresar()
+    {
+        conectar();
+    }
+
 }
