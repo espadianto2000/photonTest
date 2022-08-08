@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 4762610579902819431}
   - component: {fileID: 5995162757357455158}
   - component: {fileID: 7967171880993486562}
+  - component: {fileID: 1820691049558170505}
   m_Layer: 0
   m_Name: player
   m_TagString: cuerpo
@@ -495,6 +496,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7967171880993486562}
+  - {fileID: 1820691049558170505}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -531,6 +533,22 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &1820691049558170505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762610579902819432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 1
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &4762610580173393760
 GameObject:
   m_ObjectHideFlags: 0
