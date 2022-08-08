@@ -44,7 +44,7 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (view.IsMine)
         {
@@ -54,7 +54,7 @@ public class playerMovement : MonoBehaviour
             float mHori = Input.GetAxisRaw("Mouse X");
             float mVert = -Input.GetAxisRaw("Mouse Y");
 
-            rb.MovePosition(transform.position + (transform.forward * hori * 0.05f) + (transform.right * vert * 0.05f));
+            rb.MovePosition(transform.position + (transform.forward * hori * Time.fixedDeltaTime * 5) + (transform.right * vert * Time.fixedDeltaTime * 5));
             if (Input.GetKey(KeyCode.Space) && flagGround)
             {
                 flagGround = false;
@@ -67,7 +67,7 @@ public class playerMovement : MonoBehaviour
             var c = transform.GetChild(0);
 
             yRotate += mVert * Time.fixedDeltaTime * 125f;
-            yRotate = Mathf.Clamp(yRotate, -80f, 80f);
+            yRotate = Mathf.Clamp(yRotate, -50f, 80f);
             c.eulerAngles = new Vector3(yRotate, c.eulerAngles.y, c.eulerAngles.z);
         }
         
